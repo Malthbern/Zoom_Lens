@@ -1,0 +1,447 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="0Harmony">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\MelonLoader\net6\0Harmony.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Assembly-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="MelonLoader">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\MelonLoader\net6\MelonLoader.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.AI.Navigation">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.AI.Navigation.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Analytics.DataPrivacy">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Analytics.DataPrivacy.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Burst.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Unsafe">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Burst.Unsafe.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Collections">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Collections.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Collections.LowLevel.ILSupport">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Deformations">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Deformations.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Entities">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Entities.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Entities.Hybrid">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Entities.Hybrid.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Entities.Hybrid.HybridComponents">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Entities.Hybrid.HybridComponents.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.InputSystem">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.InputSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.InternalAPIEngineBridge.002">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.InternalAPIEngineBridge.002.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.InternalAPIEngineBridge.003">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.InternalAPIEngineBridge.003.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.InternalAPIEngineBridge.012">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.InternalAPIEngineBridge.012.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Jobs">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Jobs.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Mathematics">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Mathematics.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Mathematics.Extensions">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Mathematics.Extensions.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Mathematics.Extensions.Hybrid">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Platforms.Common">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Platforms.Common.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Polybrush">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Polybrush.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Postprocessing.Runtime">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Postprocessing.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.ProBuilder">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.ProBuilder.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.ProBuilder.Csg">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.ProBuilder.Csg.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.ProBuilder.KdTree">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.ProBuilder.KdTree.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.ProBuilder.Poly2Tri">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.ProBuilder.Poly2Tri.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.ProBuilder.Stl">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.ProBuilder.Stl.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Profiling.Core">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Profiling.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Properties">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Properties.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Properties.Reflection">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Properties.Reflection.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Properties.UI">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Properties.UI.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.RenderPipelines.Core.Runtime">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Scenes">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Scenes.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.ScriptableBuildPipeline">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.ScriptableBuildPipeline.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Serialization">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Serialization.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Analytics">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Analytics.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Authentication">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Authentication.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Core">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Core.Analytics">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Core.Analytics.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Core.Configuration">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Core.Configuration.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Core.Device">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Core.Device.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Core.Environments">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Core.Environments.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Core.Environments.Internal">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Core.Environments.Internal.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Core.Internal">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Core.Internal.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Core.Networking">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Core.Networking.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Core.Registration">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Core.Registration.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Core.Scheduler">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Core.Scheduler.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Core.Telemetry">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Core.Telemetry.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Services.Core.Threading">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Services.Core.Threading.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.TextMeshPro">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Timeline">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Timeline.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Transforms">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Transforms.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Transforms.Hybrid">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.Transforms.Hybrid.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.VectorGraphics">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.VectorGraphics.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.CoreUtils">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.CoreUtils.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.Hands">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.Hands.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.Hands.Samples.VisualizerSample">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.Hands.Samples.VisualizerSample.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.Management">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.Management.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.Oculus">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.Oculus.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.OpenVR">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenVR.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.OpenXR">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenXR.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.OpenXR.Features.ConformanceAutomation">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenXR.Features.ConformanceAutomation.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenXR.Features.MetaQuestSupport.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.OpenXR.Features.MockRuntime">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenXR.Features.MockRuntime.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.OpenXR.Features.PICOSupport">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenXR.Features.PICOSupport.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenXR.Features.RuntimeDebugger.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.XR.OpenXRPico">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenXRPico.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AccessibilityModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AIModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.AIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AndroidJNIModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AnimationModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ARModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.ARModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AssetBundleModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AudioModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClothModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClusterInputModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClusterRendererModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CrashReportingModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.DirectorModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.DirectorModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.DSPGraphModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GameCenterModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GIModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.GIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GridModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.GridModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.HotReloadModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ImageConversionModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.IMGUIModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.InputLegacyModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.InputModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.JSONSerializeModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.LocalizationModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.NVIDIAModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.NVIDIAModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ParticleSystemModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.PerformanceReportingModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.Physics2DModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.PhysicsModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ProfilerModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.ProfilerModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ScreenCaptureModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SharedInternalsModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SpatialTracking">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.SpatialTracking.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SpriteMaskModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SpriteShapeModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.StreamingModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.StreamingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SubstanceModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SubsystemsModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TerrainModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.TerrainModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TerrainPhysicsModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextCoreFontEngineModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextCoreTextEngineModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextRenderingModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TilemapModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.TilemapModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TLSModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.TLSModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UI">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UI.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIElementsModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIElementsNativeModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UIElementsNativeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UmbraModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UmbraModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UNETModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UNETModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityAnalyticsModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityConnectModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityCurlModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UnityCurlModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityTestProtocolModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VehiclesModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VFXModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VideoModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VirtualTexturingModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.VirtualTexturingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VRModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.WindModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.WindModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.XRModule">
+        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="slider" />
+      <EmbeddedResource Include="slider">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
+</Project>
