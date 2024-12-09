@@ -43,6 +43,7 @@ namespace Zoom_Lens
         {
             _zoomSlider = Patches.Obj.GetComponentInChildren<Slider>();
             MelonLogger.Msg("Click!");
+            _zoomSlider.SetValueWithoutNotify(PortableCamera.Instance.cameraComponent.fieldOfView); // Set our slider to the camera's current FOV without triggering OnValueChanged()
             _zoomSlider.onValueChanged.AddListener(delegate {FOVChange();});
         }
         
