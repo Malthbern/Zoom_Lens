@@ -17,5 +17,19 @@ namespace Zoom_Lens
             Obj.transform.localPosition = new Vector3(65f, 0, 0);
             LensMain.ConnectZoom();
         }
+        
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(PortableCamera), "TimerStarted")]
+        public static void TimerLock()
+        {
+            LensMain.LensLock(true);
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(PortableCamera), "PostImageTaken")]
+        public static void TimerUnlock()
+        {
+            LensMain.LensLock(false);
+        }
     }
 }
