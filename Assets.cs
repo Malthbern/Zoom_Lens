@@ -43,8 +43,6 @@ namespace Zoom_Lens
                 MelonLogger.Error("Zoom Lens assets failed to load!");
             }
 
-            
-
         }
     }
 }

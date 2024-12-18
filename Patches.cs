@@ -9,25 +9,26 @@ namespace Zoom_Lens
     {
         public static GameObject Obj = null;
         
+        
         [HarmonyPostfix]
-        [HarmonyPatch(typeof(PortableCamera), "Start")]
-        public static void AttachLens()
+        [HarmonyPatch(typeof(PortableCamera), "Start")] 
+        public static void AttachLens() // Get camera instance transform to connect our mod to the camera it's self
         {
             Obj = GameObject.Instantiate(Assets.Slider, PortableCamera.Instance.gameObject.transform, false);
             Obj.transform.localPosition = new Vector3(65f, 0, 0);
             LensMain.ConnectZoom();
         }
         
-        [HarmonyPrefix]
-        [HarmonyPatch(typeof(PortableCamera), "TimerStarted")]
-        public static void TimerLock()
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(PortableCamera), "MakePhotoDelayed")]
+        public static void TimerLock() // Lock zoom lens when timer is active
         {
             LensMain.LensLock(true);
         }
 
         [HarmonyPostfix]
-        [HarmonyPatch(typeof(PortableCamera), "PostImageTaken")]
-        public static void TimerUnlock()
+        [HarmonyPatch(typeof(PortableCamera), "Capture")]
+        public static void TimerUnlock() // Unlock zoom lens when timer is complete
         {
             LensMain.LensLock(false);
         }
