@@ -24,6 +24,7 @@ namespace Zoom_Lens
     {
         
         private static Slider _zoomSlider;
+        private static Collider _zoomCollider;
         
         public override void OnInitializeMelon()
         {
@@ -42,6 +43,7 @@ namespace Zoom_Lens
         public static void ConnectZoom()
         {
             _zoomSlider = Patches.Obj.GetComponentInChildren<Slider>();
+            _zoomCollider = Patches.Obj.GetComponentInChildren<Collider>();
             MelonLogger.Msg("Click!");
             _zoomSlider.SetValueWithoutNotify(PortableCamera.Instance.cameraComponent.fieldOfView); // Set our slider to the camera's current FOV without triggering OnValueChanged()
             _zoomSlider.onValueChanged.AddListener(delegate {FOVChange();});
@@ -49,7 +51,8 @@ namespace Zoom_Lens
         
         public static bool LensLock(bool newLockState)
         {
-            _zoomSlider.interactable = !newLockState; //inverse because the argument name implies true IS NOT interactable
+            _zoomSlider.interactable = !newLockState; // Inverse because the argument name implies true IS NOT interactable
+            _zoomCollider.enabled = !newLockState; // Disable collider because CVR doesn't use Unity's eventsystem stack for UI input
             return _zoomSlider.interactable;
         }
         private static void FOVChange()
