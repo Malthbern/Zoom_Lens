@@ -44,7 +44,22 @@ namespace Zoom_Lens
         {
             _zoomSlider = Patches.Obj.GetComponentInChildren<Slider>();
             _zoomCollider = Patches.Obj.GetComponentInChildren<Collider>();
-            MelonLogger.Msg("Click!");
+
+            if (_zoomSlider == null)
+            {
+                MelonLogger.Error("Zoom slider not connected");
+                return;
+            }
+            else if (_zoomCollider == null)
+            {
+                MelonLogger.Error("Zoom collider not connected");
+                return;
+            }
+            else
+            {
+                MelonLogger.Msg("Click!");
+            }
+            
             _zoomSlider.SetValueWithoutNotify(PortableCamera.Instance.cameraComponent.fieldOfView); // Set our slider to the camera's current FOV without triggering OnValueChanged()
             _zoomSlider.onValueChanged.AddListener(delegate {FOVChange();});
         }
