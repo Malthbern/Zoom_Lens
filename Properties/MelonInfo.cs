@@ -3,7 +3,6 @@ using System.Reflection;
 using Zoom_Lens;
 
 [assembly: AssemblyDescription(Zoom_Lens.BuildInfo.Description)]
-[assembly: AssemblyVersion(Zoom_Lens.BuildInfo.Version)]
 [assembly: AssemblyCopyright("Created by " + Zoom_Lens.BuildInfo.Author)]
 [assembly: AssemblyTrademark(Zoom_Lens.BuildInfo.Company)]
 [assembly: MelonInfo(typeof(LensMain), Zoom_Lens.BuildInfo.Name, Zoom_Lens.BuildInfo.Version, Zoom_Lens.BuildInfo.Author, Zoom_Lens.BuildInfo.DownloadLink)]
