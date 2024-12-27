@@ -213,14 +213,8 @@
       <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
         <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
       </Reference>
-      <Reference Include="Unity.XR.OpenXR.Features.PICOSupport">
-        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenXR.Features.PICOSupport.dll</HintPath>
-      </Reference>
       <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger">
         <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenXR.Features.RuntimeDebugger.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.XR.OpenXRPico">
-        <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\Unity.XR.OpenXRPico.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine">
         <HintPath>..\..\..\..\..\..\9200B94500B93159\SteamLibrary\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\UnityEngine.dll</HintPath>
