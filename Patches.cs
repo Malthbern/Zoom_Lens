@@ -10,6 +10,7 @@ namespace Zoom_Lens
         public static GameObject Obj = null;
         
         [HarmonyPostfix]
+        [HarmonyPriority(Priority.HigherThanNormal)]
         [HarmonyPatch(typeof(PortableCamera), "Start")] 
         public static void AttachLens() // Get camera instance transform to connect our mod to the camera it's self
         {
