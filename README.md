@@ -9,6 +9,9 @@ Install [MelonLoader](https://github.com/HerpDerpinstine/MelonLoader) version 0.
 
 Download the latest release from [Releases](https://github.com/Malthbern/Zoom_Lens/releases) and place in your ChilloutVR/Mods folder!
 
+### Building
+Sure.
+
 ## Disclamer
 ### Zoom Lens is not made by or affiliated with Alpha Blend Interactive
 
