@@ -16,7 +16,7 @@ namespace Zoom_Lens
         public const string Description = "Adds a slider to the side of the camera to allow zooming without opening the advance settings.";
         public const string Author = "Malthbern";
         public const string Company = null;
-        public const string Version = "0.1.4";
+        public const string Version = "0.1.5";
         public const string DownloadLink = "https://github.com/Malthbern/Zoom_Lens/releases";
     }
     
@@ -24,6 +24,7 @@ namespace Zoom_Lens
     {
         
         private static Slider _zoomSlider;
+        private static Text _fovText;
         private static Collider _zoomCollider;
         
         public override void OnInitializeMelon()
@@ -44,6 +45,7 @@ namespace Zoom_Lens
         {
             _zoomSlider = Patches.Obj.GetComponentInChildren<Slider>();
             _zoomCollider = Patches.Obj.GetComponentInChildren<Collider>();
+            _fovText = Patches.Obj.GetComponentInChildren<Text>();
 
             if (_zoomSlider == null)
             {
@@ -55,12 +57,18 @@ namespace Zoom_Lens
                 MelonLogger.Error("Zoom collider not connected");
                 return;
             }
+            else if (_fovText == null)
+            {
+                MelonLogger.Warning("FOV number not connected");
+            }
             else
             {
                 MelonLogger.Msg("Click!");
             }
             
             _zoomSlider.SetValueWithoutNotify(PortableCamera.Instance.cameraComponent.fieldOfView); // Set our slider to the camera's current FOV without triggering OnValueChanged()
+            _fovText.text = PortableCamera.Instance.cameraComponent.fieldOfView.ToString();
+            
             _zoomSlider.onValueChanged.AddListener(delegate {FOVChange();});
         }
         
@@ -72,6 +80,7 @@ namespace Zoom_Lens
         }
         private static void FOVChange()
         {
+            _fovText.text = _zoomSlider.value.ToString();
             PortableCamera.Instance.ChangeFov(_zoomSlider.value.ToInt());
         }
     }
