@@ -1,13 +1,14 @@
 using HarmonyLib;
 using ABI_RC.Systems.Camera;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Zoom_Lens
 {
     public class Patches
     {
         public static GameObject Obj = null;
+
+        private static readonly Vector3 _offset = new Vector3(65f, 0, 0);
         
         [HarmonyPostfix]
         [HarmonyPriority(Priority.HigherThanNormal)]
@@ -15,7 +16,7 @@ namespace Zoom_Lens
         public static void AttachLens() // Get camera instance transform to connect our mod to the camera it's self
         {
             Obj = GameObject.Instantiate(Assets.Slider, PortableCamera.Instance.gameObject.transform, false);
-            Obj.transform.localPosition = new Vector3(65f, 0, 0);
+            Obj.transform.localPosition = _offset;
             LensMain.ConnectZoom();
         }
         
