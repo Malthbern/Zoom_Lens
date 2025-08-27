@@ -1,6 +1,5 @@
 ﻿using System;
 using ABI_RC.Systems.Camera;
-using ABI.CCK.Components;
 using CurvedUI;
 using MelonLoader;
 using UnityEngine;
@@ -15,36 +14,26 @@ namespace Zoom_Lens
         public const string Description = "Adds a slider to the side of the camera to allow zooming without opening the advance settings.";
         public const string Author = "Malthbern";
         public const string Company = null;
-        public const string Version = "0.1.6";
+        public const string Version = "0.1.7";
         public const string DownloadLink = "https://github.com/Malthbern/Zoom_Lens/releases";
     }
     
     public class LensMain : MelonMod
     {
-
-        private static bool _nightly = false;
-        
         private static Slider _zoomSlider;
         private static Text _fovText;
-        private static Collider _zoomCollider;
-        
+
         public override void OnInitializeMelon()
         {
             Assets.LoadAssets();
-            
+
             try
             {
                 HarmonyInstance.PatchAll(typeof(Patches));
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MelonLogger.Error("Lens could not be attached:\n" + e);
-            }
-            
-            if (Application.version != "2025r179") //temporary fix for nightly
-            {
-                _nightly = true;
-                MelonLogger.Msg("Application is nightly");
             }
         }
 
@@ -52,22 +41,10 @@ namespace Zoom_Lens
         {
             _zoomSlider = Patches.Obj.GetComponentInChildren<Slider>();
             _fovText = Patches.Obj.GetComponentInChildren<Text>();
-            _zoomCollider = Patches.Obj.GetComponentInChildren<Collider>();
-
-            if (_nightly)
-            {
-                Component.Destroy(_zoomCollider);
-            }
             
             if (_zoomSlider == null)
             {
                 MelonLogger.Error("Zoom slider not connected");
-                return;
-            }
-            else if (_zoomCollider == null)
-            {
-                MelonLogger.Error("Zoom collider not connected");
-                MelonLogger.Warning("!!This is OK if you are running a nightly build!!");
                 return;
             }
             else if (_fovText == null)
@@ -88,12 +65,6 @@ namespace Zoom_Lens
         public static bool LensLock(bool newLockState)
         {
             _zoomSlider.interactable = !newLockState; // Inverse because the argument name implies true IS NOT interactable
-            
-            if (!_nightly)
-            {
-                _zoomCollider.enabled = !newLockState; // Disable collider because CVR doesn't use Unity's eventsystem stack for UI input
-            }
-            
             return _zoomSlider.interactable;
         }
         private static void FOVChange()
