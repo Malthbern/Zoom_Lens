@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 namespace Zoom_Lens
 {
+    
+    
     public static class BuildInfo
     {
         public const string Name = "Zoom Lens";
@@ -20,11 +22,19 @@ namespace Zoom_Lens
     
     public class LensMain : MelonMod
     {
+        public static bool IsStable = true;
+        
         private static Slider _zoomSlider;
         private static Text _fovText;
 
         public override void OnInitializeMelon()
         {
+            if (Application.version == "2025r180")
+            {
+                IsStable = false;
+                MelonLogger.Msg("ChilloutVR is a Nightly build");
+            }
+            
             Assets.LoadAssets();
 
             try
@@ -56,8 +66,8 @@ namespace Zoom_Lens
                 MelonLogger.Msg("Click!");
             }
             
-            _zoomSlider.SetValueWithoutNotify(PortableCamera.Instance.cameraComponent.fieldOfView); // Set our slider to the camera's current FOV without triggering OnValueChanged()
-            _fovText.text = PortableCamera.Instance.cameraComponent.fieldOfView.ToString();
+            _zoomSlider.SetValueWithoutNotify(PortableCamera.Instance.CameraComponent.fieldOfView); // Set our slider to the camera's current FOV without triggering OnValueChanged()
+            _fovText.text = PortableCamera.Instance.CameraComponent.fieldOfView.ToString();
             
             _zoomSlider.onValueChanged.AddListener(delegate {FOVChange();});
         }
