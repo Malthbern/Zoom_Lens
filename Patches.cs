@@ -9,8 +9,6 @@ namespace Zoom_Lens
         public static GameObject Obj = null;
 
         private static readonly Vector3 _offset = new Vector3(65f, 0, 0);
-        private static readonly Vector3 _nightlyoffset = new Vector3(180f, 0, 0);
-        private static readonly Vector3 _nightlyscale = new Vector3(0.65f, 0.65f, 0.65f);
         
         [HarmonyPostfix]
         [HarmonyPriority(Priority.HigherThanNormal)]
@@ -18,17 +16,7 @@ namespace Zoom_Lens
         public static void AttachLens() // Get camera instance transform to connect our mod to the camera it's self
         {
             Obj = GameObject.Instantiate(Assets.Slider, PortableCamera.Instance.gameObject.transform, false);
-            
-            if(LensMain.IsStable) // Tempoary fix for 2025r181
-            {
-                Obj.transform.localPosition = _offset;
-            }
-            else
-            {
-                Obj.transform.localPosition = _nightlyoffset;
-                Obj.transform.localScale = _nightlyscale;
-            }
-            
+            Obj.transform.localPosition = _offset;
             LensMain.ConnectZoom();
         }
         
