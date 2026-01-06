@@ -8,18 +8,22 @@ using UnityEngine.UI;
 
 namespace Zoom_Lens
 {
+    
+    
     public static class BuildInfo
     {
         public const string Name = "Zoom Lens";
         public const string Description = "Adds a slider to the side of the camera to allow zooming without opening the advance settings.";
         public const string Author = "Malthbern";
         public const string Company = null;
-        public const string Version = "0.1.8";
+        public const string Version = "0.1.9";
         public const string DownloadLink = "https://github.com/Malthbern/Zoom_Lens/releases";
     }
     
     public class LensMain : MelonMod
     {
+        public static bool IsStable = true;
+        
         private static Slider _zoomSlider;
         private static Text _fovText;
 
@@ -56,8 +60,9 @@ namespace Zoom_Lens
                 MelonLogger.Msg("Click!");
             }
             
-            _zoomSlider.SetValueWithoutNotify(PortableCamera.Instance.cameraComponent.fieldOfView); // Set our slider to the camera's current FOV without triggering OnValueChanged()
-            _fovText.text = PortableCamera.Instance.cameraComponent.fieldOfView.ToString();
+            _zoomSlider.SetValueWithoutNotify(PortableCamera.Instance.CameraComponent.fieldOfView); // Set our slider to the camera's current FOV without triggering OnValueChanged()
+            _fovText.text = PortableCamera.Instance.CameraComponent.fieldOfView.ToString();
+            Patches.SetZoomOffset(false);
             
             _zoomSlider.onValueChanged.AddListener(delegate {FOVChange();});
         }
