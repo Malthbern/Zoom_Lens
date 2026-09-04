@@ -9,8 +9,8 @@ namespace Zoom_Lens
     {
         public static GameObject Obj = null;
 
-        private static readonly Vector3 _vroffset = new Vector3(120f, 0, 0);
-        private static readonly Vector3 _vrscale = new Vector3(.4f, .4f, .4f);
+        private static readonly Vector3 _vroffset = new Vector3(70f, 0, 0);
+        private static readonly Vector3 _vrscale = new Vector3(.25f, .25f, .25f);
         
         private static readonly Vector3 _doffset = new Vector3(255f, 0, 0);
         private static readonly Vector3 _dscale = new Vector3(.75f, .75f, .75f);
@@ -29,7 +29,7 @@ namespace Zoom_Lens
 
         [HarmonyPrefix]
         [HarmonyPatch(typeof(PortableCamera), "SetViewportPinMode")]
-        public static bool SetZoomOffset(bool worldPin)
+        public static bool SetZoomOffset(ref bool worldPin)
         {
             
              /*
