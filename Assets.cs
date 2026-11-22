@@ -16,7 +16,7 @@ namespace Zoom_Lens
             {
                 if (assetStream != null)
                 {
-                    MelonLogger.Msg("Zoom Lens assets fetched");
+                    LensMain.MLinstance.Msg("Zoom Lens assets fetched");
                     
                     using var tempStream = new MemoryStream((int) assetStream.Length);
                     assetStream.CopyTo(tempStream);
@@ -29,17 +29,17 @@ namespace Zoom_Lens
             if (_assetBundle != null)
             {
                 Slider = _assetBundle.LoadAsset<GameObject>("ZoomCanvas");
-                MelonLogger.Msg("Found prefab");
+                LensMain.MLinstance.Msg("Found prefab");
                 Slider.hideFlags |= HideFlags.DontUnloadUnusedAsset;
             }
 
             if (Slider != null)
             {
-                MelonLogger.Msg("Zoom Lens assets have been loaded!");
+                LensMain.MLinstance.Msg("Zoom Lens assets have been loaded!");
             }
             else
             {
-                MelonLogger.Error("Zoom Lens assets failed to load!");
+                LensMain.MLinstance.Error("Zoom Lens assets failed to load!");
             }
 
         }

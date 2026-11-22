@@ -22,6 +22,7 @@ namespace Zoom_Lens
     
     public class LensMain : MelonMod
     {
+        public static MelonLogger.Instance MLinstance;
         public static bool IsStable = true;
         
         private static Slider _zoomSlider;
@@ -29,6 +30,7 @@ namespace Zoom_Lens
 
         public override void OnInitializeMelon()
         {
+            MLinstance = LoggerInstance;
             Assets.LoadAssets();
 
             try
@@ -37,7 +39,7 @@ namespace Zoom_Lens
             }
             catch (Exception e)
             {
-                MelonLogger.Error("Lens could not be attached:\n" + e);
+                MLinstance.Error("Lens could not be attached:\n" + e);
             }
         }
 
@@ -48,16 +50,16 @@ namespace Zoom_Lens
             
             if (_zoomSlider == null)
             {
-                MelonLogger.Error("Zoom slider not connected");
+                MLinstance.Error("Zoom slider not connected");
                 return;
             }
             else if (_fovText == null)
             {
-                MelonLogger.Warning("FOV number not connected");
+                MLinstance.Warning("FOV number not connected");
             }
             else
             {
-                MelonLogger.Msg("Click!");
+                MLinstance.Msg("Click!");
             }
             
             _zoomSlider.SetValueWithoutNotify(PortableCamera.Instance.CameraComponent.fieldOfView); // Set our slider to the camera's current FOV without triggering OnValueChanged()
