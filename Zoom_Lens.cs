@@ -16,7 +16,7 @@ namespace Zoom_Lens
         public const string Description = "Adds a slider to the side of the camera to allow zooming without opening the advance settings.";
         public const string Author = "Malthbern";
         public const string Company = null;
-        public const string Version = "0.1.10";
+        public const string Version = "0.1.11";
         public const string DownloadLink = "https://github.com/Malthbern/Zoom_Lens/releases";
     }
     
@@ -76,7 +76,7 @@ namespace Zoom_Lens
         private static void FOVChange()
         {
             _fovText.text = _zoomSlider.value.ToString();
-            PortableCamera.Instance.ChangeFov(_zoomSlider.value.ToInt());
+            PortableCamera.Instance.CameraComponent.fieldOfView = _zoomSlider.value;
         }
     }
 }
